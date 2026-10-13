@@ -1,0 +1,24 @@
+<div class="details-page">
+  @if (conferance) {
+    <div class="details-card">
+      <img
+        src="https://images.unsplash.com/photo-1540575467063-178a50c2df87"
+        alt="Conference"
+      />
+
+      <div class="details-content">
+        <h1>{{ conferance.name }}</h1>
+        <p><strong>ID:</strong> {{ conferance.id }}</p>
+        <p><strong>Date:</strong> {{ conferance.date }}</p>
+        <p><strong>Place:</strong> {{ conferance.place }}</p>
+        <button routerLink="/list">Back to conferences</button>
+      </div>
+    </div>
+  } @else {
+    <div class="not-found-card">
+      <h2>Conference not found</h2>
+      <p>No conference exists with ID {{ id }}.</p>
+      <button routerLink="/list">Back to conferences</button>
+    </div>
+  }
+</div>
